@@ -379,7 +379,8 @@ def predict(n_clicks, yearstart):  # Adjust parameters if needed
     
 # Run the application
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8081)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)
 # -
 
 
